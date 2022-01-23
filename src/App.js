@@ -1,9 +1,9 @@
-import React from "react"
+import React, { Component } from "react"
 import CardList from "./CardList"
 import SearchBox from "./SearchBox"
 import "./app.css"
 
-class App extends React.Component{
+class App extends Component{
     constructor(){
         super()
         this.state = {
@@ -34,10 +34,10 @@ class App extends React.Component{
         }
         return(
                 <div className="tc">
-                <h1 className="f1">Robofriends</h1>
-                <SearchBox SearchChange={this.onSearchChange}/>
-                <CardList robots={filteredRobots}/>
-            </div>
+                    <h1 className="f1">Robofriends</h1>
+                    <SearchBox SearchChange={this.onSearchChange}/>
+                        <CardList robots={filteredRobots}/>
+                </div>
         )
     }
 }
